@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigantine Engineering | Industrial Heat Exchangers & Separators Australia</title>
+    <meta name="description" content="Brigantine Engineering Services Australia - Premium industrial heat exchangers, separators and decanters. Alfalaval solutions for Australian industry.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== HOME PAGE STYLES ===== */
+        .home-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--primary);
+        }
+
+        .home-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(2, 13, 26, 0.65), rgba(2, 13, 26, 0.75)),
+                url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        .home-hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+        }
+
+        .home-hero-orb-1 {
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 194, 255, 0.18);
+            top: -100px;
+            right: -100px;
+            animation: orbFloat 18s ease-in-out infinite alternate;
+        }
+
+        .home-hero-orb-2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(0, 87, 184, 0.15);
+            bottom: -80px;
+            left: -80px;
+            animation: orbFloat 22s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes orbFloat {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(40px, 40px) scale(1.15); }
+        }
+
+        .home-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 5%;
+            text-align: left;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1.2rem;
+            border: 1px solid rgba(0, 194, 255, 0.3);
+            border-radius: 50px;
+            background: rgba(0, 194, 255, 0.08);
+        }
+
+        .home-hero-title {
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.05;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            margin-bottom: 1.5rem;
+        }
+
+        .home-hero-title span {
+            color: var(--accent);
+            display: block;
+        }
+
+        .home-hero-desc {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 600px;
+            line-height: 1.7;
+            border-left: 4px solid var(--accent);
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-btn-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .hero-scroll-indicator::after {
+            content: '';
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(0, 194, 255, 0.7), transparent);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: #001226;
+            border-top: 1px solid rgba(0, 194, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 194, 255, 0.1);
+            padding: 2rem 10%;
+        }
+
+        .stats-bar-inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.07);
+            padding: 0.5rem 0;
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-number {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.4rem;
+            display: block;
+        }
+
+        /* Products Showcase */
+        .home-products-section {
+            padding: 5rem 10%;
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-super {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .section-heading {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.15;
+        }
+
+        .section-sub {
+            font-size: 1.05rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 1rem auto 0;
+            line-height: 1.6;
+        }
+
+        .products-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .showcase-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0, 194, 255, 0.1);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 87, 184, 0.15);
+            border-color: var(--accent);
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .showcase-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary) 0%, #001f3f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .showcase-body {
+            padding: 1.8rem 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .showcase-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .showcase-body h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .showcase-body p {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .showcase-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .showcase-link:hover { gap: 1rem; }
+
+        /* Why Choose Us */
+        .why-us-section {
+            padding: 5rem 10%;
+            background: var(--primary);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-us-text .section-super { color: var(--accent); }
+        .why-us-text .section-heading { color: var(--white); }
+        .why-us-text .section-sub { color: rgba(255,255,255,0.6); max-width: 100%; }
+
+        .why-us-list {
+            list-style: none;
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .why-us-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.5;
+        }
+
+        .why-check {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(0, 194, 255, 0.15);
+            border: 1px solid rgba(0, 194, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+
+        .why-us-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(0, 194, 255, 0.12);
+            border-radius: 14px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            background: rgba(0, 194, 255, 0.08);
+            border-color: rgba(0, 194, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .why-card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-card h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-card p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.6;
+        }
+
+        /* Applications Preview */
+        .apps-section {
+            padding: 5rem 10%;
+            background: #f8fafc;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .app-card {
+            background: var(--primary);
+            border-radius: 14px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,194,255,0.1);
+        }
+
+        .app-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(0, 87, 184, 0.25);
+        }
+
+        .app-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-card h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .app-card p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* CTA Banner */
+        .home-cta {
+            padding: 6rem 10%;
+            background: linear-gradient(135deg, #001226 0%, #002952 100%);
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-cta h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .home-cta p {
+            font-size: 1.15rem;
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .home-cta-bg-orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: rgba(0, 194, 255, 0.05);
+            right: -200px;
+            top: -200px;
+            pointer-events: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+            .products-showcase-grid { grid-template-columns: 1fr 1fr; }
+            .apps-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-us-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .products-showcase-grid { grid-template-columns: 1fr; }
+            .apps-grid { grid-template-columns: 1fr 1fr; }
+            .why-us-cards { grid-template-columns: 1fr; }
+            .hero-btn-group { flex-direction: column; }
+        }
+
+        @media (max-width: 480px) {
+            .stats-bar-inner { grid-template-columns: 1fr 1fr; }
+            .apps-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="home-hero">
+        <div class="home-hero-bg"></div>
+        <div class="home-hero-orb home-hero-orb-1"></div>
+        <div class="home-hero-orb home-hero-orb-2"></div>
+
+        <div class="home-hero-content">
+            <span class="hero-eyebrow">Australian Industrial Solutions</span>
+            <h1 class="home-hero-title">
+                Precision Thermal
+                <span>& Separation</span>
+                Engineering
+            </h1>
+            <p class="home-hero-desc">
+                Brigantine Engineering delivers world-class heat exchangers, separators and decanters to Australian industry — ensuring peak energy efficiency and operational reliability.
+            </p>
+            <div class="hero-btn-group">
+                <a href="applications.html" class="btn btn-primary">Explore Applications</a>
+                <a href="contact.html" class="btn btn-outline">Get a Consultation</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">Scroll</div>
+    </section>
+
+    <!-- ================= STATS BAR ================= -->
+    <div class="stats-bar">
+        <div class="stats-bar-inner">
+            <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Industry Sectors</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PRODUCTS SHOWCASE ================= -->
+    <section class="home-products-section">
+        <div class="section-header">
+            <span class="section-super">Our Portfolio</span>
+            <h2 class="section-heading">Industrial-Grade Solutions</h2>
+            <p class="section-sub">From plate heat exchangers to high-speed separators — engineered for performance in Australia's toughest environments.</p>
+        </div>
+
+        <div class="products-showcase-grid">
+            <div class="showcase-card">
+                <div class="showcase-img-placeholder">🔷</div>
+                <div class="showcase-body">
+                    <span class="showcase-tag">Thermal Solutions</span>
+                    <h3>Gasketed Plate Heat Exchangers</h3>
+                    <p>High-efficiency gasketed plate heat exchangers for maximum thermal performance across a wide range of industrial duties and process fluids.</p>
+                    <a href="industrial-line.html" class="showcase-link">Explore Range →</a>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <img src="BRAZED-e1705483209163.webp" alt="Brazed Plate Heat Exchangers" class="showcase-img">
+                <div class="showcase-body">
+                    <span class="showcase-tag">Thermal Solutions</span>
+                    <h3>Brazed Plate Heat Exchangers</h3>
+                    <p>Compact copper-brazed units offering exceptional durability and performance for refrigeration, HVAC, and industrial heating applications.</p>
+                    <a href="brazed-plate-heat-exchangers.html" class="showcase-link">Explore Range →</a>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <img src="high_speed_separators.webp" alt="High Speed Separators" class="showcase-img">
+                <div class="showcase-body">
+                    <span class="showcase-tag">Separation</span>
+                    <h3>High Speed Separators</h3>
+                    <p>Disk stack centrifuge technology delivering superior liquid-liquid, liquid-solid separation results in food, marine, and industrial processes.</p>
+                    <a href="mab-separator.html" class="showcase-link">Explore Range →</a>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <img src="decanter.webp" alt="Decanter Centrifuges" class="showcase-img">
+                <div class="showcase-body">
+                    <span class="showcase-tag">Separation</span>
+                    <h3>Decanter Centrifuges</h3>
+                    <p>Advanced decanter technology for continuous solid-liquid separation in wastewater, oil, food processing and chemical applications.</p>
+                    <a href="mab-separator.html" class="showcase-link">Explore Range →</a>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <img src="alfacond.webp" alt="Alfacond" class="showcase-img">
+                <div class="showcase-body">
+                    <span class="showcase-tag">Thermal Solutions</span>
+                    <h3>Alfacond & Alfavap</h3>
+                    <p>Specialised evaporators and condensers built on advanced plate technology for steam condensation and evaporation duties.</p>
+                    <a href="alfacond.html" class="showcase-link">Explore Range →</a>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <div class="showcase-img-placeholder">⚡</div>
+                <div class="showcase-body">
+                    <span class="showcase-tag">Energy Efficiency</span>
+                    <h3>Energy Hunter Programme</h3>
+                    <p>Identify and capture hidden energy savings across your facility — from electricity and fuel recovery to efficiency and uptime improvements.</p>
+                    <a href="energy-hunter.html" class="showcase-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="why-us-section">
+        <div class="why-us-grid">
+            <div class="why-us-text">
+                <span class="section-super">Why Brigantine</span>
+                <h2 class="section-heading">Your Trusted Industrial Partner</h2>
+                <p class="section-sub">We combine technical expertise with world-class products to deliver engineered solutions that maximise uptime, efficiency and return on investment.</p>
+                <ul class="why-us-list">
+                    <li><span class="why-check">✓</span> Authorised distributor of world leading thermal technology brands</li>
+                    <li><span class="why-check">✓</span> Deep local knowledge of Australian industrial requirements</li>
+                    <li><span class="why-check">✓</span> Full lifecycle support — from selection to commissioning</li>
+                    <li><span class="why-check">✓</span> Energy savings analysis and optimisation services</li>
+                    <li><span class="why-check">✓</span> Fast turnaround with local parts and service support</li>
+                </ul>
+                <div style="margin-top: 2.5rem;">
+                    <a href="about.html" class="btn btn-primary">About Us</a>
+                </div>
+            </div>
+
+            <div class="why-us-cards">
+                <div class="why-card">
+                    <div class="why-card-icon">🏭</div>
+                    <h4>Industry Expertise</h4>
+                    <p>Serving food & beverage, mining, marine, chemical and HVAC sectors across Australia.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">🔧</div>
+                    <h4>Technical Support</h4>
+                    <p>Application engineers available to help you select and optimise the right solution for your process.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">⚡</div>
+                    <h4>Energy Savings</h4>
+                    <p>Our Energy Hunter programme identifies real, measurable cost savings in electricity and fuel.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">🌏</div>
+                    <h4>Local Delivery</h4>
+                    <p>Australia-based team ensuring fast delivery, local support and on-site commissioning assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= APPLICATIONS ================= -->
+    <section class="apps-section">
+        <div class="section-header">
+            <span class="section-super">Industries We Serve</span>
+            <h2 class="section-heading">Applications Across Every Sector</h2>
+            <p class="section-sub">Our equipment is trusted across Australia's broadest range of demanding industrial applications.</p>
+        </div>
+
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-icon">🍺</div>
+                <h4>Food & Beverage</h4>
+                <p>Pasteurisation, brewing, dairy and juice processing</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">⛏️</div>
+                <h4>Mining</h4>
+                <p>Cooling systems for generators and mine support infrastructure</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">🚢</div>
+                <h4>Marine</h4>
+                <p>Fuel conditioning, lube-oil and freshwater generation</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">🏗️</div>
+                <h4>HVAC</h4>
+                <p>Chillers, heat pumps and district heating substations</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="applications.html" class="btn btn-primary">View All Applications</a>
+        </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="home-cta">
+        <div class="home-cta-bg-orb"></div>
+        <div class="home-cta-content">
+            <h2>Ready to Optimise Your Process?</h2>
+            <p>Talk to our engineering team today about your thermal or separation challenge. We'll help you find the right solution — and the energy savings that come with it.</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary" style="background: var(--accent); border-color: var(--accent);">Contact Us Today</a>
+                <a href="energy-hunter.html" class="btn btn-outline" style="color: var(--white); border-color: rgba(255,255,255,0.3);">Energy Hunter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

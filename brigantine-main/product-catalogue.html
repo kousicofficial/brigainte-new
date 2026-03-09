@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue | Brigantine Engineering Australia</title>
+    <meta name="description" content="View our full product catalogue: Gasketed, Brazed, Welded Heat Exchangers and Centrifugal Separators. Engineered for performance.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .catalogue-hero { background: linear-gradient(135deg, #001226 0%, #002952 100%); padding: 8rem 10% 6rem; text-align: center; color: #fff; position: relative; overflow: hidden; }
+        .catalogue-grid-section { padding: 4rem 10%; background: #f8fafc; }
+        .catalogue-category { margin-bottom: 5rem; }
+        .catalogue-category h2 { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 2.5rem; text-align: center; }
+        .catalogue-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .product-card { 
+            background: #fff; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,194,255,0.1); 
+            display: flex; flex-direction: column; transition: all 0.3s ease;
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,87,184,0.12); border-color: var(--accent); }
+        .product-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem; }
+        .product-card p { font-size: 1rem; line-height: 1.6; color: #64748b; margin-bottom: 1.5rem; flex-grow: 1; }
+        .product-card .btn { margin-top: auto; padding: 0.8rem 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .product-badge { display: inline-block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="catalogue-hero">
+        <span class="hero-tag reveal" style="color: var(--accent); letter-spacing: 5px; font-weight: 800; text-transform: uppercase;">Engineered Portfolio</span>
+        <h1 style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; margin-bottom: 1.5rem;">Product Catalogue</h1>
+        <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.85;">
+            The most comprehensive range of thermal and separation technology in Australia. Engineered for peak industrial efficiency.
+        </p>
+    </section>
+
+    <div class="catalogue-grid-section">
+
+        <!-- Gasketed PHE -->
+        <div class="catalogue-category">
+            <h2 class="reveal">Gasketed Plate Heat Exchangers</h2>
+            <div class="catalogue-grid">
+                <div class="product-card reveal">
+                    <span class="product-badge">Flagship Range</span>
+                    <h3>Industrial Line</h3>
+                    <p>The versatile range for standard duties. High efficiency, compact footprint, and multiple plate materials.</p>
+                    <a href="industrial-line.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+                <div class="product-card reveal" style="transition-delay: 0.1s;">
+                    <span class="product-badge">Special Duty</span>
+                    <h3>M Line PHE</h3>
+                    <p>Specifically engineered for food, beverage, and dairy applications with hygienic design requirements.</p>
+                    <a href="m-line.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+                <div class="product-card reveal" style="transition-delay: 0.2s;">
+                    <span class="product-badge">Anti-Clogging</span>
+                    <h3>Wide Gap PHE</h3>
+                    <p>Optimized for fluids with high concentrations of fibers or large particles. Clog-free thermal performance.</p>
+                    <a href="wide-gap.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brazed & Welded -->
+        <div class="catalogue-category">
+            <h2 class="reveal">Welded &amp; Brazed Heat Exchangers</h2>
+            <div class="catalogue-grid">
+                <div class="product-card reveal">
+                    <span class="product-badge">Compact Duty</span>
+                    <h3>Brazed PHE Range</h3>
+                    <p>Reliable, efficient, and permanent thermal stability for HVAC and refrigeration systems.</p>
+                    <a href="brazed-plate-heat-exchangers.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+                <div class="product-card reveal" style="transition-delay: 0.1s;">
+                    <span class="product-badge">Heavy Duty</span>
+                    <h3>Compabloc Welded</h3>
+                    <p>The compact champion of welded block exchangers for extreme temperature and pressure duties.</p>
+                    <a href="compabloc.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+                <div class="product-card reveal" style="transition-delay: 0.2s;">
+                    <span class="product-badge">High Purity</span>
+                    <h3>Fusion Bonded PHE</h3>
+                    <p>100% stainless steel copper-free technology for high-purity water and aggressive medium duties.</p>
+                    <a href="fusion-bonded-plate-heat-exchangers.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Separation -->
+        <div class="catalogue-category">
+            <h2 class="reveal">Centrifugal Separation</h2>
+            <div class="catalogue-grid">
+                <div class="product-card reveal">
+                    <span class="product-badge">Disk Stack</span>
+                    <h3>MAB Separators</h3>
+                    <p>Compact, high-speed centrifugal separators for reliable oil purification and liquid-solid separation.</p>
+                    <a href="mab-separator.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+                <div class="product-card reveal" style="transition-delay: 0.1s;">
+                    <span class="product-badge">Continuous Separation</span>
+                    <h3>Decanter Centrifuges</h3>
+                    <p>Continuous solid-liquid separation with maximum throughput for thick sludges and mining tailings.</p>
+                    <a href="decanter-centrifuge-service.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">View Product</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="cta-section" style="background: var(--primary); color: #fff; text-align: center; padding: 6rem 10%;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">The Right Product for Your Duty</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem; opacity: 0.8;">
+            Our application engineers will help you select the precise model and material configuration for your process parameters.
+        </p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary" style="background: var(--accent); border-color: var(--accent);">Request Sizing & Quote</a>
+            <a href="applications.html" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Applications</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

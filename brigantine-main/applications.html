@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications | Brigantine Engineering Australia</title>
+    <meta name="description" content="Explore industrial applications for heat exchangers and separators: Cement, Chemical, Power, Oil & Gas, HVAC, and more.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #001226 0%, #002952 100%);
+            padding: 8rem 10% 4rem;
+            text-align: center;
+            color: #fff;
+        }
+        .app-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; color: #4fc3f7; margin-bottom: 1.5rem; letter-spacing: -2px; }
+        .app-hero p { max-width: 700px; margin: 0 auto; font-size: 1.2rem; opacity: 0.85; line-height: 1.7; }
+
+        .app-categories-section { padding: 4rem 10%; background: #f8fafc; }
+        .app-category { margin-bottom: 5rem; }
+        .app-category-header { 
+            display: flex; 
+            align-items: center; 
+            gap: 1.5rem; 
+            margin-bottom: 2.5rem; 
+            padding-bottom: 1rem; 
+            border-bottom: 2px solid rgba(0, 194, 255, 0.2); 
+        }
+        .app-category-icon { 
+            width: 60px; height: 60px; border-radius: 14px; 
+            background: linear-gradient(135deg, var(--primary), #002952); 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 1.8rem; flex-shrink: 0; border: 1px solid rgba(0, 194, 255, 0.2); 
+        }
+        .app-category-header h2 { font-size: 1.8rem; font-weight: 800; color: var(--primary); margin: 0; }
+        .app-category-header span { font-size: 0.85rem; color: var(--accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; }
+
+        .app-items-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .app-item { 
+            background: #fff; border-radius: 14px; padding: 2rem; 
+            border: 1px solid rgba(0, 194, 255, 0.1); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            transition: all 0.3s ease; display: flex; flex-direction: column;
+        }
+        .app-item:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 87, 184, 0.12); border-color: var(--accent); }
+        .app-item h4 { font-size: 1.2rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem; }
+        .app-item p { font-size: 0.95rem; color: #64748b; line-height: 1.6; flex-grow: 1; }
+        
+        .product-link-banner { background: linear-gradient(135deg, #001226 0%, #002952 100%); padding: 6rem 10%; color: var(--white); text-align: center; }
+        .product-link-banner h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+        .product-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2rem auto 0; }
+        .product-quick-link { background: rgba(255,255,255,0.07); border: 1px solid rgba(0, 194, 255, 0.2); border-radius: 10px; padding: 1.2rem; color: #fff; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .product-quick-link:hover { background: rgba(0, 194, 255, 0.15); border-color: var(--accent); transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="app-hero">
+        <span class="hero-tag reveal" style="color: var(--accent); letter-spacing: 5px; font-weight: 800; text-transform: uppercase;">Global Expertise</span>
+        <h1>Industrial Applications</h1>
+        <p>Providing precision-engineered thermal and separation technology for the world's most demanding industrial sectors.</p>
+    </section>
+
+    <div class="app-categories-section">
+
+        <!-- Power & Energy -->
+        <div class="app-category">
+            <div class="app-category-header">
+                <div class="app-category-icon">⚡</div>
+                <div>
+                    <span>Sector</span>
+                    <h2>Power &amp; Energy</h2>
+                </div>
+            </div>
+            <div class="app-items-grid">
+                <div class="app-item">
+                    <h4>Thermal Power Plants</h4>
+                    <p>Optimizing cooling water systems, lube oil cooling, and heat recovery for coal, gas, and combined-cycle power generation.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Nuclear Power</h4>
+                    <p>Specialized heat exchangers for safety-critical cooling systems and secondary loop heat transfer in nuclear facilities.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Renewable Energy</h4>
+                    <p>Supporting Green Hydrogen production, geothermal plants, and solar thermal energy storage solutions.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Combined Heat and Power (CHP)</h4>
+                    <p>Maximizing overall fuel efficiency by capturing waste heat for district heating or industrial processes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heavy Industry -->
+        <div class="app-category">
+            <div class="app-category-header">
+                <div class="app-category-icon">🏗️</div>
+                <div>
+                    <span>Sector</span>
+                    <h2>Heavy Industry &amp; Manufacturing</h2>
+                </div>
+            </div>
+            <div class="app-items-grid">
+                <div class="app-item">
+                    <h4>Steel Production</h4>
+                    <p>Cooling of electric arc furnaces, mold cooling, and scale pit water treatment for high-temperature smelting operations.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Cement Plants</h4>
+                    <p>Waste heat recovery from kiln exhaust and cooling systems for planetary and grate coolers to reduce energy footprint.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Mining &amp; Minerals</h4>
+                    <p>Slurry cooling, tailings dewatering, and mineral concentrate processing in harsh mining environments.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Paper &amp; Pulp Production</h4>
+                    <p>Evaporation systems for black liquor, pulp drying heat recovery, and chemical recovery cycle optimization.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chemical & Oil/Gas -->
+        <div class="app-category">
+            <div class="app-category-header">
+                <div class="app-category-icon">🧪</div>
+                <div>
+                    <span>Sector</span>
+                    <h2>Chemical, Oil &amp; Gas</h2>
+                </div>
+            </div>
+            <div class="app-items-grid">
+                <div class="app-item">
+                    <h4>Oil &amp; Gas Production</h4>
+                    <p>Separation of oil/water/gas, crude oil heating, and gas compression cooling for offshore and onshore assets.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Petrochemicals</h4>
+                    <p>Efficient heat transfer in ethylene plants, refinery processes, and polymer production loops.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Fertilizers &amp; Inorganic Chemicals</h4>
+                    <p>Corrosion-resistant exchangers for ammonia, urea, and phosphoric acid production processes.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Waste Treatment &amp; Emissions</h4>
+                    <p>Scrubbing systems, solvent recovery, and VOC emission control for industrial chemical facilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HVAC & Data Centres -->
+        <div class="app-category">
+            <div class="app-category-header">
+                <div class="app-category-icon">❄️</div>
+                <div>
+                    <span>Sector</span>
+                    <h2>HVAC &amp; Cooling</h2>
+                </div>
+            </div>
+            <div class="app-items-grid">
+                <div class="app-item">
+                    <h4>Data Centre Cooling</h4>
+                    <p>High-efficiency liquid cooling and free cooling systems to manage the critical thermal loads of modern server farms.</p>
+                </div>
+                <div class="app-item">
+                    <h4>District Cooling &amp; Cooling Networks</h4>
+                    <p>Large-scale thermal substations and chilled water production for urban infrastructure and commercial complexes.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Industrial Refrigeration</h4>
+                    <p>Ammonia and CO2 based cooling systems for cold storage, logistics hubs, and food processing plants.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Commercial HVAC</h4>
+                    <p>Chiller bypass systems and pressure interceptors for high-rise buildings and hospitality sectors.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialized Manufacturing -->
+        <div class="app-category">
+            <div class="app-category-header">
+                <div class="app-category-icon">⚙️</div>
+                <div>
+                    <span>Sector</span>
+                    <h2>Specialized Engineering</h2>
+                </div>
+            </div>
+            <div class="app-items-grid">
+                <div class="app-item">
+                    <h4>Electronics &amp; Semiconductors</h4>
+                    <p>Ultra-pure water cooling and chemical precise temperature control for cleanroom manufacturing environments.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Textile Industries</h4>
+                    <p>Heat recovery from dye baths and wastewater to reduce the thermal energy intensity of fabric production.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Metal Working &amp; Iron</h4>
+                    <p>Quenching oil cooling, hydraulic systems maintenance, and cleaning liquid recovery.</p>
+                </div>
+                <div class="app-item">
+                    <h4>Pharmaceuticals &amp; Life Sciences</h4>
+                    <p>Hygienic thermal solutions for sterile water production, fermentation, and temperature-sensitive processing.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="product-link-banner">
+        <h2>Engineered for Performance</h2>
+        <p>Discover the equipment that powers these applications across the globe.</p>
+        <div class="product-links-grid">
+            <a href="industrial-line.html" class="product-quick-link">Industrial Line PHE</a>
+            <a href="compabloc.html" class="product-quick-link">Compabloc Welded</a>
+            <a href="mab-separator.html" class="product-quick-link">Disk Stack Separators</a>
+            <a href="decanter-centrifuge-service.html" class="product-quick-link">Decanter Solutions</a>
+            <a href="wide-gap.html" class="product-quick-link">Wide Gap Heat Exchangers</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

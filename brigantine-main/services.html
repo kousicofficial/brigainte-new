@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Services | Brigantine Engineering Australia</title>
+    <meta name="description" content="Explore Brigantine Engineering's full range of services — from application engineering and sizing to energy audits and on-site support.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .service-hero { background: var(--primary); padding: 8rem 10% 6rem; text-align: center; color: #fff; position: relative; overflow: hidden; }
+        .service-grid-main { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; padding: 4rem 10%; background: #f8fafc; }
+        .service-card-full { background: #fff; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,194,255,0.1); }
+        .service-card-full h3 { font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 1.5rem; }
+        .service-card-full p { font-size: 1.1rem; line-height: 1.7; color: #64748b; margin-bottom: 2rem; }
+        .feature-list-service { list-style: none; padding: 0; }
+        .feature-list-service li { padding: 0.8rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 1rem; font-weight: 500; }
+        .feature-list-service li::before { content: "✓"; color: var(--accent); font-weight: 900; }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="service-hero">
+        <span class="hero-tag reveal" style="color: var(--accent); letter-spacing: 5px; font-weight: 800; text-transform: uppercase;">Engineering Support</span>
+        <h1 style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; margin-bottom: 1.5rem;">Our Services</h1>
+        <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.85;">
+            Beyond supplying world-class equipment, we provide the technical expertise to ensure your systems perform at peak efficiency from day one.
+        </p>
+    </section>
+
+    <div class="service-grid-main">
+        <div class="service-card-full reveal">
+            <h3>Application Engineering</h3>
+            <p>Choosing the right heat exchanger or separator requires deep technical assessment. Our engineers work with your process parameters to provide custom sizing and performance simulations.</p>
+            <ul class="feature-list-service">
+                <li>Thermal sizing & Heat balance</li>
+                <li>Material compatibility assessment</li>
+                <li>Pressure drop optimization</li>
+                <li>Fouling factor calculations</li>
+                <li>Technical drawings & integration guidance</li>
+            </ul>
+        </div>
+
+        <div class="service-card-full reveal" style="transition-delay: 0.2s;">
+            <h3>Energy Optimisation</h3>
+            <p>Our "Energy Hunter" programme identifies measurable opportunities to reduce your facility's utility costs through efficient heat recovery and improved separation technology.</p>
+            <ul class="feature-list-service">
+                <li>Site-wide energy audits</li>
+                <li>Waste heat potential assessment</li>
+                <li>ROI and payback period analysis</li>
+                <li>Utility cost reduction planning</li>
+                <li>Performance monitoring</li>
+            </ul>
+        </div>
+
+        <div class="service-card-full reveal">
+            <h3>On-Site Support</h3>
+            <p>We provide hands-on assistance to ensure your equipment is installed and maintained according to international standards and manufacturer specifications.</p>
+            <ul class="feature-list-service">
+                <li>Installation & Commissioning guidance</li>
+                <li>Maintenance & Cleanup best practices</li>
+                <li>Operator & Technician training</li>
+                <li>Troubleshooting & Root cause analysis</li>
+                <li>Performance health checks</li>
+            </ul>
+        </div>
+
+        <div class="service-card-full reveal" style="transition-delay: 0.2s;">
+            <h3>Spares & Replacement</h3>
+            <p>Maintain the integrity of your equipment with genuine spare parts. We manage inventory and logistics to ensure critical components are available when you need them.</p>
+            <ul class="feature-list-service">
+                <li>Genuine Gasket & Plate supply</li>
+                <li>Separator bowl assemblies & spares</li>
+                <li>Seal & Gear kits</li>
+                <li>Upgrade & Plate expansion kits</li>
+                <li>Fast turnaround logistics</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="cta-section" style="background: var(--primary); color: #fff; text-align: center; padding: 6rem 10%;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Partner with Technical Excellence</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem; opacity: 0.8;">
+            Our team of engineers is ready to support your next project with precision and dedication.
+        </p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary" style="background: var(--accent); border-color: var(--accent);">Talk to an Engineer</a>
+            <a href="about.html" class="btn btn-outline" style="color: #fff; border-color: #fff;">About Brigantine</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

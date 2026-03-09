@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Hunter | Brigantine Engineering Australia</title>
+    <meta name="description" content="Energy Hunter - Industrial Equipment Suppliers. Savings in electricity, fuel costs, efficiency and uptime.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .product-detail-container {
+            padding: 2rem 10% 3rem; /* Reduced padding */
+            background: var(--white);
+            color: var(--primary);
+        }
+        .product-intro {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 2rem; /* Reduced from 4rem */
+        }
+        .product-intro-text { flex: 1.2; }
+        .product-intro-image { 
+            flex: 0.8; 
+            aspect-ratio: 1/1;
+            background: var(--primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-intro-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(0, 168, 232, 0.1));
+        }
+        .app-link {
+            display: inline-block;
+            margin-top: auto;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+            transition: var(--trans-fast);
+        }
+        .app-link:hover {
+            border-bottom-color: var(--accent);
+            color: var(--accent2);
+        }
+        .cta-section {
+            background: var(--grad-primary);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 10%; /* Reduced from 6rem */
+            position: relative;
+            z-index: 1;
+        }
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        @media (max-width: 968px) {
+            .product-intro { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero-3d-bg" style="display: flex; align-items: center; justify-content: center; padding: 4rem 10%; background: linear-gradient(rgba(2, 13, 26, 0.7), rgba(2, 13, 26, 0.7)), url('https://www.suryasankara.in/wp-content/uploads/2024/01/photo-1505904504351-87ef181e9581.jpeg'); background-size: cover; background-position: center; min-height: 35vh;">
+        <div class="hero-content-3d" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 2; position:relative; width:100%;">
+            <span class="hero-tag reveal" style="color: var(--accent); letter-spacing: 5px; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem;">Optimized Performance</span>
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; text-transform: uppercase; letter-spacing: -2px; line-height: 1.1; color: var(--white); margin: 0;">Energy Hunter</h1>
+            <p class="reveal" style="transition-delay: 0.2s; font-size: 1.25rem; max-width: 700px; margin-top: 2rem; color: rgba(255,255,255,0.8);">
+                Discover how our advanced heat exchanger solutions translate into direct savings in electricity, fuel costs, and massive improvements in overall system efficiency and uptime.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= SAVINGS IN ELECTRICITY ================= -->
+    <section class="layered-section reveal">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <img src="https://www.suryasankara.in/wp-content/uploads/2024/01/battery.png" alt="Electricity Savings" style="width: 40px; height: auto;">
+            <h2 class="section-title" style="text-align: left; margin: 0;">Savings in Electricity</h2>
+        </div>
+        <div class="specs-grid">
+            <div class="spec-item">
+                <h4>Chiller condenser protection</h4>
+                <p>The condenser of a chiller using open cooling tower water is prone to develop a layer of CaCO3. A 1 mm coating inside the tubes can mean 3°C higher condensation temperature, translating to ~10% higher condensation pressure and increased electricity consumption.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Chiller-condenser-protection-and-savings-with-AHRI_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>AHRI performance certification</h4>
+                <p>Can you accurately measure 0.5°C? Lower evaporation temperatures lead to higher lift with the chiller compressor and increasing electricity consumption up to 3%. Installing Performance Certified plate heat exchangers provides a payback under three years.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/AHRI-sustainable-high-rise_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Free cooling with chiller bypass</h4>
+                <p>Turn the chiller off up to 30 days per year and protect it from CaCO3 coating on tubes. AHRI Performance Certification is vital as approach temperatures of 1°C are needed to achieve optimal free cooling.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Free-cooling-with-chiller-bypass_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Energy savings in ammonia chillers & heat pumps</h4>
+                <p>By utilizing secondary systems using water, glycol, or CO2, complete refrigeration systems can be centralized. Refrigerant charge is minimized, driving significant energy efficiency.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Energy-savings-in-chiller-heat-pumps-with-PHEs_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SAVINGS IN FUEL COSTS ================= -->
+    <section class="layered-section reveal">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <img src="https://www.suryasankara.in/wp-content/uploads/2024/01/fuel.png" alt="Fuel Savings" style="width: 40px; height: auto;">
+            <h2 class="section-title" style="text-align: left; margin: 0;">Savings in Fuel Costs</h2>
+        </div>
+        <div class="specs-grid">
+            <div class="spec-item">
+                <h4>Heat recovery from air compressors</h4>
+                <p>72% is the conversion of electricity to waste heat with air compressors. Recovering this heat instead of releasing it to the atmosphere improves the dryer operation and reaps direct fuel savings for secondary heating processes.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Heat-recovery-from-air-compressors_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Heat recovery from warm wastewater</h4>
+                <p>With wide gap plate technology, recover heat efficiently without blocking. Wastewater at 35°C can save 175 kW (150,000 kCal/hr) to preheat boiler feed water, yielding a payback under six months.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Heat-recovery-from-warm-wastewater_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Heat recovery from waste flash steam</h4>
+                <p>Industrial steam management often requires handling flash steam. A simple cyclone separator can condense it into water up to 80°C. Recovering just 500 kg/hr saves considerable capital monthly.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Heat-recovery-from-waste-flash-steam_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Boiler protection</h4>
+                <p>Mud, CaCO3, and oxygenated water can bake onto a boiler's heater. Incorporating gasketed plate heat exchanger protection significantly reduces fuel costs (up to 30% less) by preventing these scale deposits.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Boiler-protection-with-GPHEs_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Heat recovery from open cooling tower</h4>
+                <p>Preheating boiler feed water using cooling tower return substantially increases cooling capacity, lowers boiler fuel costs by nearly half, and minimizes water evaporation in the tower.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Heat-recovery-from-open-cooling-tower_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SAVINGS WITH EFFICIENCY & UPTIME ================= -->
+    <section class="layered-section reveal">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <img src="https://www.suryasankara.in/wp-content/uploads/2024/01/savings.png" alt="Efficiency" style="width: 40px; height: auto;">
+            <h2 class="section-title" style="text-align: left; margin: 0;">Efficiency and Uptime</h2>
+        </div>
+        <div class="specs-grid">
+            <div class="spec-item">
+                <h4>Cooling tower interchanger</h4>
+                <p>Protect plant equipment from open cooling tower mineral deposits (CaCO3) and chloride ions. Enjoy maintenance-free operation and avoid pumping cost spikes due to pipe diameter reduction.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Cooling-tower-interchanger_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Shell-and-tube replacement</h4>
+                <p>Transition to a gasketed plate heat exchanger to reduce footprint, ease maintenance procedures, allow faster response times, and curtail heat losses to the atmosphere associated with traditional shell-and-tube models.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Shell-and-tube-replacement-with-only-dimensional-data_training-material_EN_HIRES.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+            <div class="spec-item">
+                <h4>Air compressor heat exchanger replacement</h4>
+                <p>Replace failure-prone in-built brazed or shell-and-tube heat exchangers with highly durable gasketed units, effectively resisting damage from calcium carbonate and heavy chloride accumulations in unmanaged open cooling towers.</p>
+                <a href="https://www.suryasankara.in/wp-content/uploads/2024/01/Heat-recovery-from-air-compressors_training-material_EN_HIRES-1.pdf" class="app-link" target="_blank">View Application Sheet →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TECHNICAL ADVANTAGES ================= -->
+    <section class="layered-section reveal">
+        <h2 class="section-title">Technical Advantages</h2>
+        <ul class="feature-list">
+            <li>High Heat Transfer Efficiency (Optimized Plate Patterns)</li>
+            <li>Compact Footprint (Ideal for tight industrial spaces)</li>
+            <li>Modular & Scalable (Easy to add plates for future needs)</li>
+            <li>Corrosion Resistant Materials (Titanium, Hastelloy, SS316)</li>
+            <li>Low Maintenance requirements (Easy-to-open frame)</li>
+            <li>High Pressure/Temperature capability</li>
+        </ul>
+    </section>
+
+    <!-- ================= CTA SECTION ================= -->
+    <section class="cta-section reveal">
+        <h2>Start Hunting Energy Tolls</h2>
+        <p>Harness these cutting-edge thermal strategies configured for your precise engineering requirements and significantly boost your operational profitability.</p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary" style="background: var(--accent); border-color: var(--accent);">Expert Consultation</a>
+            <a href="services.html" class="btn btn-outline" style="color: var(--white); border-color: var(--white);">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
