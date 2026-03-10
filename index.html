@@ -64,7 +64,7 @@
             z-index: 2;
             max-width: 900px;
             padding: 0 5%;
-            text-align: left;
+            text-align: center;
         }
 
         .hero-eyebrow {
@@ -82,12 +82,12 @@
         }
 
         .home-hero-title {
-            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-size: clamp(2.2rem, 6vw, 4rem);
             font-weight: 900;
             color: var(--white);
-            line-height: 1.05;
+            line-height: 1.1;
             text-transform: uppercase;
-            letter-spacing: -3px;
+            letter-spacing: -2px;
             margin-bottom: 1.5rem;
         }
 
@@ -97,19 +97,20 @@
         }
 
         .home-hero-desc {
-            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-size: clamp(1rem, 2vw, 1.15rem);
             color: rgba(255, 255, 255, 0.75);
-            max-width: 600px;
+            max-width: 700px;
             line-height: 1.7;
-            border-left: 4px solid var(--accent);
-            padding-left: 2rem;
-            margin-bottom: 3rem;
+            margin: 0 auto 3rem;
+            border-left: none;
+            padding-left: 0;
         }
 
         .hero-btn-group {
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .hero-scroll-indicator {
@@ -490,10 +491,12 @@
         }
 
         @media (max-width: 768px) {
+            .home-hero-title { font-size: clamp(2rem, 8vw, 2.5rem); letter-spacing: -1px; }
+            .home-hero-desc { padding: 0; }
             .products-showcase-grid { grid-template-columns: 1fr; }
             .apps-grid { grid-template-columns: 1fr 1fr; }
             .why-us-cards { grid-template-columns: 1fr; }
-            .hero-btn-group { flex-direction: column; }
+            .hero-btn-group { flex-direction: column; align-items: center; }
         }
 
         @media (max-width: 480px) {
