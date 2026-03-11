@@ -117,11 +117,18 @@ function initInteractiveLayout() {
 
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector(":scope > a");
+        
         if (toggle) {
             toggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
-                    e.preventDefault();
-                    dropdown.classList.toggle("active-mobile");
+                    const href = toggle.getAttribute("href");
+                    // Toggle if it's a '#' link OR if specifically clicking the arrow
+                    if (href === "#" || e.target.classList.contains('dropdown-arrow')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dropdown.classList.toggle("active-mobile");
+                    }
+                    // Else: About Us, Services & Support (real links) will be followed if clicking text.
                 }
             });
         }
@@ -130,12 +137,16 @@ function initInteractiveLayout() {
     submenus.forEach(item => {
         const submenuToggle = item.querySelector(":scope > a");
         const nestedMenu = item.querySelector(".dropdown-submenu");
+        
         if (nestedMenu && submenuToggle) {
             submenuToggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    item.classList.toggle("active-mobile-submenu");
+                    const href = submenuToggle.getAttribute("href");
+                    if (href === "#" || e.target.classList.contains('submenu-arrow')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        item.classList.toggle("active-mobile-submenu");
+                    }
                 }
             });
         }

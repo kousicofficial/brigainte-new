@@ -8,8 +8,10 @@
   --text: #e2e8f0;
   /* Crispier off-white for dark backgrounds */
   --text-muted: #cbd5e1;
-  /* Cleaner slate for secondary text */
-  --text-dark: #0f172a;
+  /* Darker version for light backgrounds */
+  --text-muted-dark: #475569;
+  /* Deep slate for primary text on white */
+  --text-dark: #020617;
   /* Rich charcoal for light backgrounds */
   --white: #ffffff;
   --bg-light: #051829;
@@ -245,7 +247,53 @@ body {
     border-left: 3px solid var(--accent);
     font-weight: 600;
     transition: var(--trans-fast);
-    color: inherit; /* Fix visibility issue */
+    color: inherit;
+}
+
+/* --- PRODUCT DETAIL SECTIONS --- */
+.product-detail-container { 
+    padding: 4rem 10%; 
+    background: var(--white); 
+    color: var(--primary); 
+}
+
+.product-intro { 
+    display: flex; 
+    gap: 4rem; 
+    align-items: center; 
+    margin-bottom: 4rem; 
+}
+
+.product-intro-text { 
+    flex: 1.2; 
+}
+
+.product-intro-image { 
+    flex: 0.8; 
+    aspect-ratio: 1/1; 
+    background: var(--primary); 
+    border-radius: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: 800; 
+    color: var(--accent); 
+    border: 1px solid var(--accent); 
+    box-shadow: var(--shadow-lg); 
+    position: relative; 
+    overflow: hidden;
+}
+
+@media (max-width: 968px) {
+    .product-intro { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 2rem;
+    }
+    .product-intro-text h2 {
+        font-size: 1.8rem !important;
+        word-break: keep-all;
+    }
 }
 
 .layered-section:nth-child(even) .feature-list li {
@@ -431,11 +479,25 @@ header {
   .dropdown-menu li a {
     padding: 15px 20px !important;
     font-size: 1rem !important;
+    justify-content: center !important; /* Center text in mobile dropdowns */
   }
 
   .dropdown-submenu li a {
-    padding-left: 40px !important;
+    padding-left: 20px !important; /* Reduced from 40px */
     font-size: 0.9rem !important;
+    justify-content: center !important;
+  }
+  
+  .nav-links li a {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .dropdown-arrow, .submenu-arrow {
+    padding: 10px; /* Make hit target larger */
+    margin-left: 5px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
   }
 
   .dropdown-header {
@@ -1721,14 +1783,12 @@ section.visible {
   }
 
   header {
-    padding: 1rem 5%;
-    height: 100px;
-    /* Increased height for larger logo */
+    padding: 0.8rem 5%;
+    height: 80px;
   }
 
   .logo-container img {
-    height: 85px;
-    /* Increased logo height */
+    height: 60px;
   }
 
   .hamburger {
@@ -1740,26 +1800,37 @@ section.visible {
   .nav-links {
     position: fixed;
     left: -100%;
-    top: 100px;
-    /* Updated to match new header height */
+    top: 80px; /* Reduced from 100px */
     flex-direction: column;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     text-align: center;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start;
     transition: var(--transition);
-    gap: 2rem !important;
-    padding: 4rem 0;
+    gap: 1.5rem !important;
+    padding: 3rem 0;
     z-index: 999;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
   }
 
   .nav-links.active {
     left: 0;
   }
 
-  nav ul li a {
+  .nav-links li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links li a {
     font-size: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
   }
 
   .distributor-logo {
