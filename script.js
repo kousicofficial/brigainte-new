@@ -121,24 +121,16 @@ function initInteractiveLayout() {
         if (toggle) {
             toggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
-                    const arrow = dropdown.querySelector('.dropdown-arrow');
-                    // Check if the click target is the arrow or a child of the arrow
-                    const isArrowClick = e.target.classList.contains('dropdown-arrow') || e.target.closest('.dropdown-arrow');
+                    // On mobile, clicking the main dropdown parent always toggles it
+                    e.preventDefault();
+                    e.stopPropagation();
                     
-                    if (toggle.getAttribute('href') === '#' || isArrowClick) {
-                        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                        if (dropdownMenu) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            
-                            // Close other open dropdowns at the same level
-                            dropdowns.forEach(other => {
-                                if (other !== dropdown) other.classList.remove("active-mobile");
-                            });
-                            
-                            dropdown.classList.toggle("active-mobile");
-                        }
-                    }
+                    // Close other open dropdowns at the same level for clarity
+                    dropdowns.forEach(other => {
+                        if (other !== dropdown) other.classList.remove("active-mobile");
+                    });
+                    
+                    dropdown.classList.toggle("active-mobile");
                 }
             });
         }
@@ -151,7 +143,7 @@ function initInteractiveLayout() {
         if (nestedMenu && submenuToggle) {
             submenuToggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
-                    const arrow = item.querySelector('.submenu-arrow');
+                    // Only prevent default if we're clicking an arrow or the link has no href
                     const isArrowClick = e.target.classList.contains('submenu-arrow') || e.target.closest('.submenu-arrow');
                     
                     if (submenuToggle.getAttribute("href") === "#" || isArrowClick) {
@@ -164,15 +156,24 @@ function initInteractiveLayout() {
         }
     });
 
-    /* Close menu on click */
-    document.querySelectorAll(".nav-links a:not([href='#'])").forEach(link => {
-        link.addEventListener("click", () => {
-            if (hamburger) hamburger.classList.remove("active");
-            if (navLinks) navLinks.classList.remove("active");
-            document.body.style.overflow = "auto";
-            document.querySelectorAll(".active-mobile, .active-mobile-submenu").forEach(el => {
-                el.classList.remove("active-mobile", "active-mobile-submenu");
-            });
+    /* Auto-close mobile menu when clicking a final link */
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", (e) => {
+            const hasDropdown = link.closest('.nav-dropdown');
+            const isDropdownParent = link.parentElement.classList.contains('nav-dropdown');
+            const isSubMenuParent = link.nextElementSibling && (link.nextElementSibling.classList.contains('dropdown-menu') || link.nextElementSibling.classList.contains('dropdown-submenu'));
+
+            if (window.innerWidth < 1024) {
+                // If it's a final link (not a parent toggle), close the menu
+                if (!isDropdownParent && !isSubMenuParent) {
+                    if (hamburger) hamburger.classList.remove("active");
+                    if (navLinks) navLinks.classList.remove("active");
+                    document.body.style.overflow = "auto";
+                    document.querySelectorAll(".active-mobile, .active-mobile-submenu").forEach(el => {
+                        el.classList.remove("active-mobile", "active-mobile-submenu");
+                    });
+                }
+            }
         });
     });
 }
