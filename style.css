@@ -320,10 +320,15 @@ header {
   width: 100%;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the nav */
   align-items: center;
   border-bottom: 2px solid var(--accent);
   transition: var(--trans-smooth);
+}
+
+.logo-container {
+  position: absolute;
+  left: 5%;
 }
 
 .logo-container img {
@@ -398,8 +403,10 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centered options */
   align-items: center;
+  gap: 10px; /* Space for arrows */
+  text-align: center;
 }
 
 .dropdown-menu li:last-child a {
@@ -417,6 +424,7 @@ header {
   background: rgba(255, 255, 255, 0.03);
   pointer-events: none;
   user-select: none;
+  text-align: center; /* Centered header */
 }
 
 /* Multi-level Dropdown */
@@ -1785,6 +1793,11 @@ section.visible {
   header {
     padding: 0.8rem 5%;
     height: 80px;
+    justify-content: space-between; /* Restore for mobile to keep hamburger right */
+  }
+
+  .logo-container {
+    position: static; /* Reset absolute on mobile */
   }
 
   .logo-container img {
