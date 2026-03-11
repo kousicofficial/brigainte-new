@@ -121,17 +121,23 @@ function initInteractiveLayout() {
         if (toggle) {
             toggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
-                    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                    if (dropdownMenu) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        // Close other open dropdowns at the same level
-                        dropdowns.forEach(other => {
-                            if (other !== dropdown) other.classList.remove("active-mobile");
-                        });
-                        
-                        dropdown.classList.toggle("active-mobile");
+                    const arrow = dropdown.querySelector('.dropdown-arrow');
+                    // Check if the click target is the arrow or a child of the arrow
+                    const isArrowClick = e.target.classList.contains('dropdown-arrow') || e.target.closest('.dropdown-arrow');
+                    
+                    if (toggle.getAttribute('href') === '#' || isArrowClick) {
+                        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                        if (dropdownMenu) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            
+                            // Close other open dropdowns at the same level
+                            dropdowns.forEach(other => {
+                                if (other !== dropdown) other.classList.remove("active-mobile");
+                            });
+                            
+                            dropdown.classList.toggle("active-mobile");
+                        }
                     }
                 }
             });
@@ -145,8 +151,10 @@ function initInteractiveLayout() {
         if (nestedMenu && submenuToggle) {
             submenuToggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
-                    const href = submenuToggle.getAttribute("href");
-                    if (href === "#" || e.target.classList.contains('submenu-arrow')) {
+                    const arrow = item.querySelector('.submenu-arrow');
+                    const isArrowClick = e.target.classList.contains('submenu-arrow') || e.target.closest('.submenu-arrow');
+                    
+                    if (submenuToggle.getAttribute("href") === "#" || isArrowClick) {
                         e.preventDefault();
                         e.stopPropagation();
                         item.classList.toggle("active-mobile-submenu");

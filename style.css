@@ -485,6 +485,10 @@ header {
     visibility: visible !important;
     max-height: 1000px;
     padding: 10px 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .dropdown-menu li a {
@@ -494,17 +498,21 @@ header {
   }
 
   .dropdown-submenu li a {
-    padding-left: 20px !important; /* Reduced from 40px */
+    padding: 12px 10px !important;
     font-size: 0.9rem !important;
-    justify-content: center !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .nav-links li a {
-    justify-content: center;
+    display: block !important;
+    text-align: center !important;
     width: 100%;
     position: relative;
-    padding: 15px 50px !important; /* Buffer for arrow */
-    text-align: center;
+    padding: 15px 10px !important; /* Reduced to avoid wrapping */
+    font-size: 1.5rem;
+    box-sizing: border-box;
   }
 
   .dropdown-arrow, .submenu-arrow {
@@ -529,6 +537,9 @@ header {
     background: rgba(255, 255, 255, 0.05) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     margin-top: 5px;
+    text-align: center !important;
+    width: 100%;
+    display: block !important;
   }
 }
 
@@ -3436,24 +3447,25 @@ body {
   .nav-dropdown.active-mobile .dropdown-menu {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 0; /* Removed left indent for perfect centering */
+    padding: 0.5rem 0; 
     gap: 0;
-    align-items: center; /* Center dropdown items */
+    align-items: center; 
+    width: 100%;
   }
 
   .nav-dropdown .dropdown-menu li {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: block; /* Safer for centering child 'a' tags */
   }
 
   .nav-dropdown .dropdown-menu li a {
     font-size: 1rem !important;
-    padding: 1rem 1rem !important;
+    padding: 1rem 10px !important; /* Reduced side padding */
     color: rgba(255, 255, 255, 0.75) !important;
-    border-left: none !important; /* Remove off-center border */
-    justify-content: center !important;
-    text-align: center;
+    border-left: none !important; 
+    display: block !important;
+    text-align: center !important;
+    width: 100%;
   }
 
   /* --- GLOBAL HEADING SAFETY --- */
