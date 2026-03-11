@@ -5,14 +5,10 @@
   --accent: #00c2ff;
   --accent2: #0057b8;
   --accent-glow: rgba(0, 194, 255, 0.4);
-  --text: #e2e8f0;
-  /* Crispier off-white for dark backgrounds */
-  --text-muted: #cbd5e1;
-  /* Darker version for light backgrounds */
-  --text-muted-dark: #475569;
-  /* Deep slate for primary text on white */
-  --text-dark: #020617;
-  /* Rich charcoal for light backgrounds */
+  --text: #f1f5f9;  /* Crisp white for dark bg */
+  --text-muted: #f8fafc; /* Even clearer */
+  --text-muted-dark: #334155; /* Deeper slate for light bg */
+  --text-dark: #222222; /* Primary dark text for white bg */
   --white: #ffffff;
   --bg-light: #051829;
   --bg-card: #071f35;
@@ -66,6 +62,11 @@ body {
   background-color: var(--primary);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+p {
+  opacity: 1 !important;
+  color: inherit;
 }
 
 /* --- 3D UTILITIES --- */
@@ -655,7 +656,7 @@ nav {
 .hero-description-layered {
   max-width: 650px;
   font-size: clamp(1rem, 2vw, 1.3rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text);
   border-left: 5px solid var(--accent);
   padding-left: 2rem;
   margin-top: 2rem;
@@ -749,7 +750,7 @@ nav {
   font-size: 1.15rem;
   line-height: 1.7;
   max-width: 550px;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .about-hero-image {
@@ -1018,7 +1019,8 @@ nav {
 
 .about-cta p {
   font-size: 1.15rem;
-  opacity: 0.85;
+  opacity: 1;
+  color: #fff;
 }
 
 @media (max-width: 992px) {
@@ -1171,7 +1173,7 @@ nav {
 .hero-content p {
   font-size: 1.2rem;
   color: var(--white);
-  opacity: 0.9;
+  opacity: 1;
   max-width: 600px;
   margin-bottom: 2.5rem;
 }
@@ -1439,7 +1441,7 @@ section.visible {
   content: "";
   flex: 1;
   height: 1px;
-  background: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.2);
 }
 
 .expertise-list ul li {
@@ -2287,7 +2289,7 @@ section.visible {
   max-width: 650px;
   margin: auto;
   font-size: 1.15rem;
-  opacity: 0.85;
+  opacity: 1;
 }
 
 /* Main Section */
@@ -2343,7 +2345,7 @@ section.visible {
 }
 
 .contact-detail-text p {
-  opacity: 0.85;
+  opacity: 1;
 }
 
 /* Right Panel */
