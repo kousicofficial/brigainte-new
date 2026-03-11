@@ -121,14 +121,18 @@ function initInteractiveLayout() {
         if (toggle) {
             toggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
-                    const href = toggle.getAttribute("href");
-                    // Toggle if it's a '#' link OR if specifically clicking the arrow
-                    if (href === "#" || e.target.classList.contains('dropdown-arrow')) {
+                    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                    if (dropdownMenu) {
                         e.preventDefault();
                         e.stopPropagation();
+                        
+                        // Close other open dropdowns at the same level
+                        dropdowns.forEach(other => {
+                            if (other !== dropdown) other.classList.remove("active-mobile");
+                        });
+                        
                         dropdown.classList.toggle("active-mobile");
                     }
-                    // Else: About Us, Services & Support (real links) will be followed if clicking text.
                 }
             });
         }

@@ -499,13 +499,26 @@ header {
   .nav-links li a {
     justify-content: center;
     width: 100%;
+    position: relative;
+    padding: 15px 50px !important; /* Buffer for arrow */
+    text-align: center;
   }
 
   .dropdown-arrow, .submenu-arrow {
-    padding: 10px; /* Make hit target larger */
-    margin-left: 5px;
-    background: rgba(255,255,255,0.05);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px; /* Hit target */
+    margin-left: 0;
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
   }
 
   .dropdown-header {
@@ -3417,24 +3430,19 @@ body {
   }
 
   /* --- NAV DROPDOWN ON MOBILE --- */
-  .nav-dropdown .dropdown-menu {
-    position: static;
-    transform: none;
+  .nav-dropdown.active-mobile .dropdown-menu {
     display: flex;
     flex-direction: column;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    min-width: auto;
     padding: 0.5rem 0 0 1rem;
     gap: 0;
   }
 
   .nav-dropdown .dropdown-menu li a {
     font-size: 1rem !important;
-    padding: 1rem 1rem;
+    padding: 1rem 1rem !important;
     color: rgba(255, 255, 255, 0.75) !important;
     border-left: 2px solid rgba(79, 195, 247, 0.4);
+    justify-content: center !important;
   }
 
   /* --- GLOBAL HEADING SAFETY --- */
