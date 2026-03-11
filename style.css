@@ -7,9 +7,9 @@
   --accent-glow: rgba(0, 194, 255, 0.4);
   --text: #e2e8f0;
   /* Crispier off-white for dark backgrounds */
-  --text-muted: #94a3b8;
+  --text-muted: #cbd5e1;
   /* Cleaner slate for secondary text */
-  --text-dark: #1a202c;
+  --text-dark: #0f172a;
   /* Rich charcoal for light backgrounds */
   --white: #ffffff;
   --bg-light: #051829;
@@ -191,7 +191,7 @@ body {
 
 .layered-section:nth-child(even) { 
     background: #f8fafc; 
-    color: var(--primary); 
+    color: var(--text-dark); /* Ensure text is dark and visible */
 }
 
 .layered-section h2.section-title {
@@ -489,18 +489,26 @@ header {
 }
 
 .hero-title-bold {
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-size: clamp(1.8rem, 5vw, 4rem);
   font-weight: 900;
   color: var(--white);
   line-height: 1.1;
   text-transform: uppercase;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
+}
+
+@media (max-width: 600px) {
+  .hero-title-bold {
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
+    letter-spacing: -1px;
+    word-break: keep-all;
+  }
 }
 
 .hero-title-bold span {
   display: block;
-  overflow: hidden;
-  padding-bottom: 10px;
+  overflow: visible;
+  padding-bottom: 5px;
 }
 
 .hero-title-bold span i {
@@ -508,18 +516,49 @@ header {
   display: block;
   transform: translateY(100%);
   animation: slideUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  white-space: nowrap; /* Prevent word break in title */
+}
+
+@media (max-width: 480px) {
+  .hero-title-bold, 
+  .hero-3d-bg h1, 
+  .service-hero h1,
+  .about-hero-content h1 {
+    font-size: 8vw !important;
+    letter-spacing: -1px;
+    white-space: normal;
+    word-break: keep-all; /* Prevent breaking in middle of words */
+  }
 }
 
 .hero-description-layered {
   max-width: 650px;
   font-size: clamp(1rem, 2vw, 1.3rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   border-left: 5px solid var(--accent);
-  padding-left: 2.5rem;
+  padding-left: 2rem;
   margin-top: 2rem;
   animation: fadeIn 1.5s ease 0.6s forwards;
   opacity: 0;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hero-layout-grid {
+    padding: 0 5%;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-description-layered {
+    border-left: none;
+    border-top: 3px solid var(--accent);
+    padding-left: 0;
+    padding-top: 1.5rem;
+    margin: 2rem auto 0;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
 }
 
 .hero-actions {

@@ -116,7 +116,7 @@ function initInteractiveLayout() {
     const submenus = document.querySelectorAll(".dropdown-menu > li");
 
     dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector("a");
+        const toggle = dropdown.querySelector(":scope > a");
         if (toggle) {
             toggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
@@ -128,12 +128,13 @@ function initInteractiveLayout() {
     });
 
     submenus.forEach(item => {
-        const submenuToggle = item.querySelector("a");
+        const submenuToggle = item.querySelector(":scope > a");
         const nestedMenu = item.querySelector(".dropdown-submenu");
         if (nestedMenu && submenuToggle) {
             submenuToggle.addEventListener("click", (e) => {
                 if (window.innerWidth < 1024) {
                     e.preventDefault();
+                    e.stopPropagation();
                     item.classList.toggle("active-mobile-submenu");
                 }
             });
