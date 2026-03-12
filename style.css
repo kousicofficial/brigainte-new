@@ -65,16 +65,14 @@ body {
 }
 
 p {
-  color: #222222 !important;
-  opacity: 1 !important;
+  color: var(--text-dark);
   line-height: 1.7;
 }
 
 .section-text p,
 .content p,
 .description p {
-  color: #222222 !important;
-  opacity: 1 !important;
+  color: var(--text-dark);
 }
 
 .fade,
@@ -87,23 +85,12 @@ p {
   opacity: 1 !important;
 }
 
+/* --- GLOBAL DARK SECTION CONTRAST FIXES --- */
+.dark-section,
 .section-dark,
+.hero-section,
 .bg-dark,
 .blue-section,
-.dark-section {
-  color: #ffffff !important;
-}
-
-.section-dark p, .section-dark li, .section-dark span,
-.bg-dark p, .bg-dark li, .bg-dark span,
-.blue-section p, .blue-section li, .blue-section span,
-.dark-section p, .dark-section li, .dark-section span {
-  color: #e6f7ff !important;
-  opacity: 1 !important;
-}
-
-/* --- DARK SECTION CONTRAST FIXES --- */
-.dark-section,
 .hero-industrial,
 .home-hero,
 .about-hero,
@@ -118,31 +105,58 @@ p {
 .cta-section,
 .stats-bar,
 .app-card,
-.why-card {
+.why-card,
+.hero-3d-bg,
+.industrial-hero,
+.sp-hero,
+.app-hero,
+.product-link-banner,
+.service-hero,
+.catalogue-hero,
+.about-image-right,
+.vision-mission-section[style*="primary"],
+.cta-banner {
   color: #ffffff !important;
 }
 
+/* Paragraphs, Lists, Spans, Divs inside Dark Sections */
 .dark-section p, .dark-section li, .dark-section span, .dark-section div,
-.home-hero p, .home-hero li, .home-hero span,
-.hero-industrial p, .hero-industrial li, .hero-industrial span,
-.about-hero p, .about-hero li, .about-hero span,
-.contact-hero p, .contact-hero li, .contact-hero span,
-.services-hero-split p, .services-hero-split li, .services-hero-split span,
-.layered-section p, .layered-section li, .layered-section span,
-.why-us-section p, .why-us-section li, .why-us-section span,
-.home-cta p, .home-cta li, .home-cta span,
-.about-cta p, .about-cta li, .about-cta span,
-.site-footer p, .site-footer li, .site-footer span,
-.contact-info-panel p, .contact-info-panel li, .contact-info-panel span,
-.cta-section p, .cta-section li, .cta-section span,
-.stats-bar p, .stats-bar li, .stats-bar span,
-.app-card p, .app-card li, .app-card span,
-.why-card p, .why-card li, .why-card span {
+.section-dark p, .section-dark li, .section-dark span, .section-dark div,
+.hero-section p, .hero-section li, .hero-section span, .hero-section div,
+.bg-dark p, .bg-dark li, .bg-dark span, .bg-dark div,
+.blue-section p, .blue-section li, .blue-section span, .blue-section div,
+.home-hero p, .home-hero li, .home-hero span, .home-hero div,
+.hero-industrial p, .hero-industrial li, .hero-industrial span, .hero-industrial div,
+.about-hero p, .about-hero li, .about-hero span, .about-hero div,
+.contact-hero p, .contact-hero li, .contact-hero span, .contact-hero div,
+.services-hero-split p, .services-hero-split li, .services-hero-split span, .services-hero-split div,
+.layered-section p, .layered-section li, .layered-section span, .layered-section div,
+.why-us-section p, .why-us-section li, .why-us-section span, .why-us-section div,
+.home-cta p, .home-cta li, .home-cta span, .home-cta div,
+.about-cta p, .about-cta li, .about-cta span, .about-cta div,
+.site-footer p, .site-footer li, .site-footer span, .site-footer div,
+.contact-info-panel p, .contact-info-panel li, .contact-info-panel span, .contact-info-panel div,
+.cta-section p, .cta-section li, .cta-section span, .cta-section div,
+.stats-bar p, .stats-bar li, .stats-bar span, .stats-bar div,
+.app-card p, .app-card li, .app-card span, .app-card div,
+.why-card p, .why-card li, .why-card span, .why-card div,
+.hero-3d-bg p, .hero-3d-bg li, .hero-3d-bg span, .hero-3d-bg div,
+.industrial-hero p, .industrial-hero li, .industrial-hero span, .industrial-hero div,
+.app-hero p, .app-hero li, .app-hero span, .app-hero div,
+.product-link-banner p, .product-link-banner li, .product-link-banner span, .product-link-banner div,
+.service-hero p, .service-hero li, .service-hero span, .service-hero div,
+.catalogue-hero p, .catalogue-hero li, .catalogue-hero span, .catalogue-hero div,
+.about-image-right p, .about-image-right li, .about-image-right span, .about-image-right div {
   color: #e6f7ff !important;
   opacity: 1 !important;
 }
 
+/* Headings inside Dark Sections */
 .dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4,
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4,
+.hero-section h1, .hero-section h2, .hero-section h3, .hero-section h4,
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4,
+.blue-section h1, .blue-section h2, .blue-section h3, .blue-section h4,
 .home-hero h1, .home-hero h2, .home-hero h3, .home-hero h4,
 .hero-industrial h1, .hero-industrial h2, .hero-industrial h3, .hero-industrial h4,
 .about-hero h1, .about-hero h2, .about-hero h3, .about-hero h4,
@@ -157,7 +171,14 @@ p {
 .cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4,
 .stats-bar h1, .stats-bar h2, .stats-bar h3, .stats-bar h4,
 .app-card h1, .app-card h2, .app-card h3, .app-card h4,
-.why-card h1, .why-card h2, .why-card h3, .why-card h4 {
+.why-card h1, .why-card h2, .why-card h3, .why-card h4,
+.hero-3d-bg h1, .hero-3d-bg h2, .hero-3d-bg h3, .hero-3d-bg h4,
+.industrial-hero h1, .industrial-hero h2, .industrial-hero h3, .industrial-hero h4,
+.app-hero h1, .app-hero h2, .app-hero h3, .app-hero h4,
+.product-link-banner h1, .product-link-banner h2, .product-link-banner h3, .product-link-banner h4,
+.service-hero h1, .service-hero h2, .service-hero h3, .service-hero h4,
+.catalogue-hero h1, .catalogue-hero h2, .catalogue-hero h3, .catalogue-hero h4,
+.about-image-right h1, .about-image-right h2, .about-image-right h3, .about-image-right h4 {
   color: #ffffff !important;
   opacity: 1 !important;
 }
@@ -166,9 +187,12 @@ p {
 .layered-section:nth-child(even) p,
 .layered-section:nth-child(even) li,
 .layered-section:nth-child(even) span,
+.layered-section:nth-child(even) div,
 .layered-section:nth-child(even) h2,
-.layered-section:nth-child(even) h3 {
+.layered-section:nth-child(even) h3,
+.layered-section:nth-child(even) h4 {
   color: #222222 !important;
+  background: transparent;
 }
 
 
@@ -482,7 +506,7 @@ nav {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  opacity: 0.9;
+  opacity: 1;
   transition: var(--trans-fast);
   display: flex;
   align-items: center;
@@ -1561,7 +1585,7 @@ section.visible {
   color: var(--accent-color);
   position: absolute;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.8; /* Increased for better visibility */
   transition: var(--transition);
 }
 
@@ -1603,7 +1627,7 @@ section.visible {
 /* Premium Footer */
 .site-footer {
   background-color: #001226;
-  color: #94a3b8;
+  color: #e6f7ff; /* Improved contrast */
   font-size: 0.95rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -1633,11 +1657,11 @@ section.visible {
   height: 80px;
   width: auto;
   filter: brightness(0) invert(1);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .footer-tagline {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85); /* Increased opacity */
   font-size: 0.92rem;
   letter-spacing: 0.5px;
 }
@@ -1678,7 +1702,7 @@ section.visible {
 
 .footer-products-col ul li {
   display: block;
-  color: #94a3b8;
+  color: #e6f7ff; /* Improved contrast */
   font-size: 0.92rem;
   transition: color 0.2s;
   padding: 0;
@@ -1750,7 +1774,7 @@ section.visible {
 
 .footer-map-detail p {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #e6f7ff;
   line-height: 1.5;
 }
 
@@ -1845,7 +1869,7 @@ section.visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #64748b;
+  color: #e6f7ff; /* Improved contrast */
   font-size: 0.85rem;
 }
 
