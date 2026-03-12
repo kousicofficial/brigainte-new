@@ -179,7 +179,8 @@
 
 .sp-section-header p {
     font-size: 1.1rem;
-    color: #475569; /* Slate-700 for better contrast on white */
+    color: #222222 !important; /* Darker for better contrast */
+    opacity: 1 !important;
 }
 
 /* ===== PROCESS STEPS ===== */
@@ -242,8 +243,9 @@
 
 .sp-step p {
     font-size: 0.88rem;
-    color: #475569; /* Darker slate */
+    color: #333333 !important; /* Darker slate */
     line-height: 1.6;
+    opacity: 1 !important;
 }
 
 /* ===== SERVICES GRID ===== */
@@ -287,8 +289,9 @@
 
 .sp-service-card p {
     font-size: 0.95rem;
-    color: #475569; /* Consistent darker slate */
+    color: #333333 !important; /* Consistent darker slate */
     line-height: 1.7;
+    opacity: 1 !important;
 }
 
 /* ===== WHY CHOOSE BRIGANTINE — 3D ANIMATED ===== */
@@ -480,11 +483,12 @@
 
 .sp-why-card p {
     font-size: 0.93rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95) !important;
     line-height: 1.7;
     position: relative;
     z-index: 1;
     transition: color 0.3s ease;
+    opacity: 1 !important;
 }
 
 .sp-why-card:hover p {
@@ -507,8 +511,9 @@
 
 .sp-cta-content p {
     font-size: 1.1rem;
-    color: rgba(0, 18, 38, 0.8);
+    color: #001226 !important;
     margin-bottom: 2rem;
+    opacity: 1 !important;
 }
 
 .sp-cta-btns {

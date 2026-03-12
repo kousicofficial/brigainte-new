@@ -65,9 +65,53 @@ body {
 }
 
 p {
+  color: #222222 !important;
   opacity: 1 !important;
-  color: inherit;
+  line-height: 1.7;
 }
+
+.section-text p,
+.content p,
+.description p {
+  color: #222222 !important;
+  opacity: 1 !important;
+}
+
+.fade,
+.fade-text,
+.light-text,
+.secondary-text,
+.aos-init,
+.aos-animate,
+.reveal {
+  opacity: 1 !important;
+  color: #333333 !important;
+}
+
+/* Ensure text visibility on dark backgrounds */
+.hero-content p,
+.about-hero-content p,
+.cta-section p,
+.home-cta p,
+.site-footer p,
+.contact-hero p,
+.contact-info-panel p,
+.services-hero-split p,
+.layered-section p,
+.product-detail-container .cta-section p {
+  color: var(--text) !important; /* Default light color for dark sections */
+}
+
+/* Re-override for light sections inside layered sections */
+.layered-section:nth-child(even) p {
+  color: #222222 !important;
+}
+
+/* Specific fix for product pages */
+.product-detail-container p {
+  color: #222222 !important;
+}
+
 
 /* --- 3D UTILITIES --- */
 .perspective-container {
