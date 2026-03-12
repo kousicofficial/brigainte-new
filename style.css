@@ -85,30 +85,89 @@ p {
 .aos-animate,
 .reveal {
   opacity: 1 !important;
-  color: #333333 !important;
 }
 
-/* Ensure text visibility on dark backgrounds */
-.hero-content p,
-.about-hero-content p,
-.cta-section p,
-.home-cta p,
-.site-footer p,
-.contact-hero p,
-.contact-info-panel p,
-.services-hero-split p,
-.layered-section p,
-.product-detail-container .cta-section p {
-  color: var(--text) !important; /* Default light color for dark sections */
+.section-dark,
+.bg-dark,
+.blue-section,
+.dark-section {
+  color: #ffffff !important;
+}
+
+.section-dark p, .section-dark li, .section-dark span,
+.bg-dark p, .bg-dark li, .bg-dark span,
+.blue-section p, .blue-section li, .blue-section span,
+.dark-section p, .dark-section li, .dark-section span {
+  color: #e6f7ff !important;
+  opacity: 1 !important;
+}
+
+/* --- DARK SECTION CONTRAST FIXES --- */
+.dark-section,
+.hero-industrial,
+.home-hero,
+.about-hero,
+.contact-hero,
+.services-hero-split,
+.layered-section,
+.why-us-section,
+.home-cta,
+.about-cta,
+.site-footer,
+.contact-info-panel,
+.cta-section,
+.stats-bar,
+.app-card,
+.why-card {
+  color: #ffffff !important;
+}
+
+.dark-section p, .dark-section li, .dark-section span, .dark-section div,
+.home-hero p, .home-hero li, .home-hero span,
+.hero-industrial p, .hero-industrial li, .hero-industrial span,
+.about-hero p, .about-hero li, .about-hero span,
+.contact-hero p, .contact-hero li, .contact-hero span,
+.services-hero-split p, .services-hero-split li, .services-hero-split span,
+.layered-section p, .layered-section li, .layered-section span,
+.why-us-section p, .why-us-section li, .why-us-section span,
+.home-cta p, .home-cta li, .home-cta span,
+.about-cta p, .about-cta li, .about-cta span,
+.site-footer p, .site-footer li, .site-footer span,
+.contact-info-panel p, .contact-info-panel li, .contact-info-panel span,
+.cta-section p, .cta-section li, .cta-section span,
+.stats-bar p, .stats-bar li, .stats-bar span,
+.app-card p, .app-card li, .app-card span,
+.why-card p, .why-card li, .why-card span {
+  color: #e6f7ff !important;
+  opacity: 1 !important;
+}
+
+.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4,
+.home-hero h1, .home-hero h2, .home-hero h3, .home-hero h4,
+.hero-industrial h1, .hero-industrial h2, .hero-industrial h3, .hero-industrial h4,
+.about-hero h1, .about-hero h2, .about-hero h3, .about-hero h4,
+.contact-hero h1, .contact-hero h2, .contact-hero h3, .contact-hero h4,
+.services-hero-split h1, .services-hero-split h2, .services-hero-split h3, .services-hero-split h4,
+.layered-section h1, .layered-section h2, .layered-section h3, .layered-section h4,
+.why-us-section h1, .why-us-section h2, .why-us-section h3, .why-us-section h4,
+.home-cta h1, .home-cta h2, .home-cta h3, .home-cta h4,
+.about-cta h1, .about-cta h2, .about-cta h3, .about-cta h4,
+.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4,
+.contact-info-panel h1, .contact-info-panel h2, .contact-info-panel h3, .contact-info-panel h4,
+.cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4,
+.stats-bar h1, .stats-bar h2, .stats-bar h3, .stats-bar h4,
+.app-card h1, .app-card h2, .app-card h3, .app-card h4,
+.why-card h1, .why-card h2, .why-card h3, .why-card h4 {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
 /* Re-override for light sections inside layered sections */
-.layered-section:nth-child(even) p {
-  color: #222222 !important;
-}
-
-/* Specific fix for product pages */
-.product-detail-container p {
+.layered-section:nth-child(even) p,
+.layered-section:nth-child(even) li,
+.layered-section:nth-child(even) span,
+.layered-section:nth-child(even) h2,
+.layered-section:nth-child(even) h3 {
   color: #222222 !important;
 }
 
