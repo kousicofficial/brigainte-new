@@ -119,36 +119,34 @@ p {
   color: #ffffff !important;
 }
 
-/* Paragraphs, Lists, Spans, Divs inside Dark Sections */
-.dark-section p, .dark-section li, .dark-section span, .dark-section div,
-.section-dark p, .section-dark li, .section-dark span, .section-dark div,
-.hero-section p, .hero-section li, .hero-section span, .hero-section div,
-.bg-dark p, .bg-dark li, .bg-dark span, .bg-dark div,
-.blue-section p, .blue-section li, .blue-section span, .blue-section div,
-.home-hero p, .home-hero li, .home-hero span, .home-hero div,
-.hero-industrial p, .hero-industrial li, .hero-industrial span, .hero-industrial div,
-.about-hero p, .about-hero li, .about-hero span, .about-hero div,
-.contact-hero p, .contact-hero li, .contact-hero span, .contact-hero div,
-.services-hero-split p, .services-hero-split li, .services-hero-split span, .services-hero-split div,
-.layered-section p, .layered-section li, .layered-section span, .layered-section div,
-.why-us-section p, .why-us-section li, .why-us-section span, .why-us-section div,
-.home-cta p, .home-cta li, .home-cta span, .home-cta div,
-.about-cta p, .about-cta li, .about-cta span, .about-cta div,
-.site-footer p, .site-footer li, .site-footer span, .site-footer div,
-.contact-info-panel p, .contact-info-panel li, .contact-info-panel span, .contact-info-panel div,
-.cta-section p, .cta-section li, .cta-section span, .cta-section div,
-.stats-bar p, .stats-bar li, .stats-bar span, .stats-bar div,
-.app-card p, .app-card li, .app-card span, .app-card div,
-.why-card p, .why-card li, .why-card span, .why-card div,
-.hero-3d-bg p, .hero-3d-bg li, .hero-3d-bg span, .hero-3d-bg div,
-.industrial-hero p, .industrial-hero li, .industrial-hero span, .industrial-hero div,
-.app-hero p, .app-hero li, .app-hero span, .app-hero div,
-.product-link-banner p, .product-link-banner li, .product-link-banner span, .product-link-banner div,
-.service-hero p, .service-hero li, .service-hero span, .service-hero div,
-.catalogue-hero p, .catalogue-hero li, .catalogue-hero span, .catalogue-hero div,
-.about-image-right p, .about-image-right li, .about-image-right span, .about-image-right div {
+/* Paragraphs and Lists inside Dark Sections (Targeting only direct or non-component children) */
+.dark-section p, .dark-section li,
+.section-dark p, .section-dark li,
+.hero-section p, .hero-section li,
+.bg-dark p, .bg-dark li,
+.blue-section p, .blue-section li,
+.home-hero p, .home-hero li,
+.hero-industrial p, .hero-industrial li,
+.about-hero p, .about-hero li,
+.contact-hero p, .contact-hero li,
+.site-footer p, .site-footer li,
+.contact-info-panel p, .contact-info-panel li,
+.cta-section p, .cta-section li,
+.stats-bar p, .stats-bar li,
+.hero-3d-bg p, .hero-3d-bg li,
+.industrial-hero p, .industrial-hero li,
+.app-hero p, .app-hero li,
+.product-link-banner p, .product-link-banner li,
+.service-hero p, .service-hero li,
+.catalogue-hero p, .catalogue-hero li,
+.about-image-right p, .about-image-right li {
   color: #e6f7ff !important;
   opacity: 1 !important;
+}
+
+/* Specific rule for Layered Sections to avoid hitting cards */
+.layered-section p, .layered-section li {
+    color: #e6f7ff; /* No !important here so spec-item can override easily */
 }
 
 /* Headings inside Dark Sections */
@@ -193,6 +191,37 @@ p {
 .layered-section:nth-child(even) h4 {
   color: #222222 !important;
   background: transparent;
+}
+
+/* =======================================================
+   CARD VISIBILITY FIX (Strong Contrast for All Devices)
+   ======================================================= */
+.spec-item, .card, .vm-card, .team-card {
+    background: #ffffff !important;
+}
+
+/* Headings inside white cards */
+.spec-item h4, .card h3, .vm-card h2, .team-card h3, .expertise-list h4 {
+    color: #111827 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* Paragraphs and list items inside white cards */
+.spec-item p, .card p, .vm-card p, .team-card p, .expertise-list ul li {
+    color: #1f2937 !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+/* Secondary override to ensure visibility in layered sections */
+.layered-section .spec-item p, 
+.layered-section .spec-item h4,
+.layered-section .card p,
+.layered-section .card h3 {
+    color: inherit; /* Should inherit from the rules above */
 }
 
 
